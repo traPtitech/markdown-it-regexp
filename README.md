@@ -4,7 +4,7 @@ Make simple [markdown-it](https://github.com/markdown-it/markdown-it) plugins ea
 ## Usage:
 
 ```js
-var md     = require('markdown-it')
+var MD     = require('markdown-it')
 var Plugin = require('markdown-it-regexp')
 
 var plugin = Plugin(
@@ -12,16 +12,16 @@ var plugin = Plugin(
   /@(\w+)/,
 
   // this function will be called when something matches
-  function(match, utils) {
+  function(match) {
     var url = 'http://example.org/u/' + match[1]
 
-    return '<a href="' + utils.escape(url) + '">'
-         + utils.escape(match[1])
+    return '<a href="' + md.utils.escape(url) + '">'
+         + md.utils.escape(match[1])
          + '</a>'
   }
 )
 
-md()
+var md = MD()
   .use(plugin)
   .render("hello @user")
 
@@ -35,4 +35,3 @@ md()
 
 1. it could be slower than you expect
 2. it is a draft, breaking changes might happen
-
