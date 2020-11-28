@@ -1,3 +1,6 @@
+# @traptitech/markdown-it-regexp
+
+**Forked from https://github.com/rlidwka/markdown-it-regexp**
 
 Make simple [markdown-it](https://github.com/markdown-it/markdown-it) plugins easier.
 
