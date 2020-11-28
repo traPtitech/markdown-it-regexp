@@ -2,6 +2,7 @@
   "name": "@traptitech/markdown-it-regexp",
   "version": "0.5.0",
   "description": "plugin that makes regexp replacement simple",
+  "types": "index.d.ts",
   "author": "traPtitech",
   "repository": {
     "type": "git",
@@ -13,5 +14,8 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/markdown-it": "^10.0.3"
+  }
 }
