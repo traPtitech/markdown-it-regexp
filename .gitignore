@@ -1,23 +1,27 @@
-# OS X
-.DS_Store*
-Icon?
-._*
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Linux
-.directory
-*~
-
-
-# npm
+# Dependencies
 node_modules
 *.log
 *.gz
 
+# Build output
+dist/
 
-# Coveralls
+# Coverage
 coverage
+
+# OS
+.DS_Store*
+Icon?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.directory
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
