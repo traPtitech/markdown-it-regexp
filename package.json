@@ -2,7 +2,24 @@
   "name": "@traptitech/markdown-it-regexp",
   "version": "0.5.3",
   "description": "plugin that makes regexp replacement simple",
-  "types": "index.d.ts",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
   "author": "traPtitech",
   "repository": {
     "type": "git",
@@ -16,6 +33,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/markdown-it": "^12.0.0"
+    "@types/markdown-it": "^14.1.2",
+    "markdown-it": "^14.1.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }
